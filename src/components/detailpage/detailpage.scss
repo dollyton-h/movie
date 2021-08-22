@@ -1,0 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  background-color: grey;
+}
+
+.details-container {
+  height: 100vh;
+}
+
+.left-side {
+  margin: 20px 0px 0px -900px;
+  h2 {
+    letter-spacing: 2px;
+    font-family: sans-serif;
+  }
+  img {
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  p {
+    margin-top: 10px;
+  }
+}

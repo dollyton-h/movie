@@ -1,0 +1,16 @@
+.header-main {
+  height: 70px;
+  width: 100%;
+  background: grey;
+  display: flex;
+  input {
+    height: 30px;
+    width: 200px;
+    margin: 20px 0px 0px 30px;
+    text-indent: 10px;
+  }
+  button {
+    height: 34px;
+    margin: 20px 0px 0px 0px;
+  }
+}
