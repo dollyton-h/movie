@@ -1,7 +1,7 @@
 const initialState = {
   movieList: [],
   newMovieList: [],
-  search: "",
+
   loading: false,
   error: false,
   error_message: "",

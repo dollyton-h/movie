@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./header.scss";
-import axios from "axios";
+
 import { useDispatch } from "react-redux";
 import { searchAsync } from "../../redux/action/searchAction";
 

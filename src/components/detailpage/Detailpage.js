@@ -22,14 +22,18 @@ function Detailpage({ match }) {
   }, [id]);
   return (
     <div className="details-container">
-      <div className="left-side">
-        <h2>
-          {Title}({Year})
-        </h2>
-        <img src={Poster} />
-        <p>{Genre}</p>
-        <p>{Actors}</p>
-      </div>
+      {loading === true ? (
+        "loading"
+      ) : (
+        <div className="left-side">
+          <h2>
+            {Title}({Year})
+          </h2>
+          <img src={Poster} alt="detail-poster" />
+          <p>{Genre}</p>
+          <p>{Actors}</p>
+        </div>
+      )}
     </div>
   );
 }

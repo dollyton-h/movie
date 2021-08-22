@@ -5,7 +5,7 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import searchReducer from "./redux/reducer/searchReducer";
+
 import rootReducer from "./redux/reducer/rootReducer";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // agar bisa dibaca redux devtools

@@ -1,14 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Modal from "react-modal";
 import Header from "../header/Header";
 import "./homepage.scss";
 import { useSelector } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Homepage() {
-  const [allMovie, setAllMovie] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [poste, setPoster] = useState("");
   const { movieList, loading, error, error_message } = useSelector(
     (state) => state.searchReducer
   );
+
+  const handleOpenModal = (e) => {
+    setPoster(e);
+    setModalOpen(true);
+  };
 
   return (
     <div>
@@ -25,12 +32,18 @@ function Homepage() {
                 movieList.map((e) => {
                   return (
                     <div className="card-movie">
-                      <Link to={`/${e.imdbID}`}>
-                        <div>
-                          <img src={e.Poster} />
+                      <div>
+                        <img
+                          src={e.Poster}
+                          onClick={() => {
+                            handleOpenModal(e);
+                          }}
+                          alt="list-poster"
+                        />
+                        <Link to={`/${e.imdbID}`}>
                           <p>Title : {e.Title}</p>
-                        </div>
-                      </Link>
+                        </Link>
+                      </div>
                     </div>
                   );
                 })}
@@ -38,6 +51,10 @@ function Homepage() {
           )}
         </p>
       )}
+
+      <Modal isOpen={modalOpen} onRequestClose={() => setModalOpen(false)}>
+        <img className="modal-poster" src={poste.Poster} alt="modal-poster" />
+      </Modal>
     </div>
   );
 }
