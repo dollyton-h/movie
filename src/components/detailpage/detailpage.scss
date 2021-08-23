@@ -1,23 +1,112 @@
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
 .details-container {
   height: 100vh;
+  background-color: black;
+  overflow: auto;
 }
 
 .left-side {
-  margin: 20px 0px 0px -900px;
+  margin: 20px 0px 0px 0px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.details-right {
   h2 {
-    letter-spacing: 2px;
-    font-family: sans-serif;
+    margin: 40px 0px 0px 30px;
+  }
+  span {
+    font-size: 16px;
+    margin-top: 10px;
+    border: 2px solid grey;
+  }
+}
+
+.find-movie {
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: grey;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  left: 900px;
+  &:hover {
+    background-color: rgb(97, 93, 93);
+    color: rgb(209, 204, 204);
+  }
+}
+
+.plot-sinopsis {
+  display: flex;
+  button {
+    height: 35px;
+    width: 200px;
+    margin: 30px 0px 0px 50px;
   }
   img {
-    margin-top: 20px;
+    margin: 30px 0px 0px 50px;
     border-radius: 10px;
   }
+}
+
+.btn1-active {
+  color: #17569a;
+  border-radius: 10px;
+  border: none;
+  background-color: #1e2e42;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.btn1-null {
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.details {
+  color: white;
+  margin: 40px 0px 0px 30px;
   p {
+    font-family: sans-serif;
+    line-height: 1.5em;
+    width: 830px;
+    span {
+      border: none;
+      color: yellow;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+  }
+  .details-actor,
+  .details-genre {
+    font-weight: bold;
     margin-top: 10px;
+  }
+}
+
+.rating {
+  color: white;
+}
+
+hr {
+  margin: 20px 0px 0px 35px;
+}
+
+.rating-details {
+  margin: 20px 0px 0px 35px;
+  font-family: sans-serif;
+  span {
+    margin-left: 10px;
+    padding: 2px;
   }
 }

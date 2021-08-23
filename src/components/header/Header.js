@@ -34,6 +34,7 @@ function Header() {
         <button onClick={handleClickEvent}>Search Movie</button>
         <button onClick={moreHandle}>More</button>
       </div>
+      <hr />
     </div>
   );
 }

@@ -18,14 +18,23 @@ function Homepage() {
   };
 
   return (
-    <div>
+    <div className="home-main">
       <Header />
 
       {error && (
         <p>
-          {error_message}
+          {error_message === "Incorrect IMDb ID." ? (
+            <p className="input-mo">Please Input Movie Name</p>
+          ) : (
+            <p className="error-msg">
+              404: {error_message}
+              <br />
+              <br />
+              <span> please input new movie</span>
+            </p>
+          )}
           {loading === true ? (
-            "loading"
+            <p className="loading">Loading</p>
           ) : (
             <div className="container">
               {movieList &&
@@ -41,7 +50,7 @@ function Homepage() {
                           alt="list-poster"
                         />
                         <Link to={`/${e.imdbID}`}>
-                          <p>Title : {e.Title}</p>
+                          <p>{e.Title}</p>
                         </Link>
                       </div>
                     </div>
