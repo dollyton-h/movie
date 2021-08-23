@@ -26,12 +26,7 @@ function Homepage() {
           {error_message === "Incorrect IMDb ID." ? (
             <p className="input-mo">Please Input Movie Name</p>
           ) : (
-            <p className="error-msg">
-              404: {error_message}
-              <br />
-              <br />
-              <span> please input new movie</span>
-            </p>
+            <p className="error-msg">{error_message}</p>
           )}
           {loading === true ? (
             <p className="loading">Loading</p>

@@ -8,9 +8,18 @@
     width: 200px;
     margin: 20px 0px 0px 30px;
     text-indent: 10px;
+    border-radius: 5px;
   }
   button {
+    min-width: 150px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 20px !important;
+    color: white;
+    cursor: pointer;
+    background-color: #1e2e42;
     height: 34px;
     margin: 20px 0px 0px 0px;
+    border-radius: 5px;
   }
 }

@@ -32,7 +32,7 @@ function Header() {
           <input name={"search"} />
         </form>
         <button onClick={handleClickEvent}>Search Movie</button>
-        <button onClick={moreHandle}>More</button>
+        <button onClick={moreHandle}>More Movie...</button>
       </div>
       <hr />
     </div>
